@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bereket Abebe · Web apps & AI evaluation</title>
+<meta name="description" content="Bereket Abebe builds full-stack web apps and tests AI models to find where they fail. Projects and results.">
+<meta name="theme-color" content="#05070a">
+<meta property="og:title" content="Bereket Abebe · Web apps & AI evaluation">
+<meta property="og:image" content="https://beki-hck.github.io/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:description" content="Full-stack web apps that businesses run on, and open-source tools that test AI models.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2305070a'/%3E%3Crect x='3' y='3' width='58' height='58' rx='12' fill='none' stroke='%237cf2c9' stroke-width='3'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-weight='700' font-size='27' letter-spacing='-1' fill='%237cf2c9'%3EBA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Noto+Sans+Ethiopic:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=9">
+</head>
+<body>
+<canvas id="ink" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor-glow" aria-hidden="true"></div>
+<div class="cur-ring" aria-hidden="true"></div><div class="cur-dot" aria-hidden="true"></div>
+
+<div class="progress" aria-hidden="true"><i id="prog"></i></div>
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Back to top"><span class="brand-mark">BA</span><span class="brand-name">Bereket Abebe</span></a>
+  <nav class="nav-links" aria-label="Sections">
+    <a href="#web">Web apps</a>
+    <a href="#ai">AI evaluation</a>
+    <a href="#path">Path</a>
+  </nav>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <p class="eyebrow reveal"><span class="pulse"></span> Addis Ababa · open to remote work</p>
+    <h1 class="hero-title">
+      <span class="line"><span class="word">I build web apps</span></span>
+      <span class="line"><span class="word">businesses <em>can run on</em>,</span></span>
+      <span class="line"><span class="word">and I test AI models</span></span>
+      <span class="line"><span class="word">to find <em class="ink">where they break.</em></span></span>
+    </h1>
+    <div class="hero-foot reveal">
+      <div class="who"><img class="avatar" src="img/bereket-sm.webp" alt="Bereket Abebe" width="288" height="288"><p class="hero-sub">Bereket Abebe. Computer science graduate (2026) with a biology degree. Full-stack web developer who also builds tools that test AI.</p></div>
+      <div class="hero-actions">
+        <a class="btn btn-ink magnetic" href="#ai">AI evaluation work <span aria-hidden="true">↓</span></a>
+        <a class="btn btn-ghost magnetic" href="#web">Web apps <span aria-hidden="true">↓</span></a>
+      </div>
+    </div>
+    <dl class="stats reveal">
+      <div><dt><span class="count" data-to="7">0</span></dt><dd>shops covered by Baltina, my inventory app</dd></div>
+      <div><dt><span class="count" data-to="46">0</span></dt><dd>database changes in Baltina, each one tested</dd></div>
+      <div><dt><span class="count" data-to="5">0</span></dt><dd>AI testing projects, open on GitHub</dd></div>
+      <div><dt><span class="count" data-to="113">0</span></dt><dd>Amharic test questions I wrote and checked</dd></div>
+    </dl>
+    <div class="ge" aria-hidden="true">ሰላም</div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>JavaScript</span><i>✦</i><span>Supabase / PostgreSQL</span><i>✦</i><span>Offline PWAs</span><i>✦</i><span>PHP</span><i>✦</i><span>React / TypeScript</span><i>✦</i><span>FastAPI</span><i>✦</i><span>Python</span><i>✦</i><span>LLM-as-judge</span><i>✦</i><span>RAG</span><i>✦</i><span>RLHF data</span><i>✦</i><span>chrF</span><i>✦</i><span>Ollama</span><i>✦</i><span>Docker</span><i>✦</i><span>GitHub Actions</span><i>✦</i>
+      <span>JavaScript</span><i>✦</i><span>Supabase / PostgreSQL</span><i>✦</i><span>Offline PWAs</span><i>✦</i><span>PHP</span><i>✦</i><span>React / TypeScript</span><i>✦</i><span>FastAPI</span><i>✦</i><span>Python</span><i>✦</i><span>LLM-as-judge</span><i>✦</i><span>RAG</span><i>✦</i><span>RLHF data</span><i>✦</i><span>chrF</span><i>✦</i><span>Ollama</span><i>✦</i><span>Docker</span><i>✦</i><span>GitHub Actions</span><i>✦</i>
+    </div>
+  </div>
+
+  <!-- WEB -->
+  <section class="section" id="web">
+    <header class="section-head reveal">
+      <span class="idx">01</span>
+      <h2>Web apps <em>for real work</em></h2>
+      <p>Built end to end: database, permissions, offline sync, interface, deployment.</p>
+    </header>
+
+    <article class="case reveal">
+      <div class="case-copy">
+        <p class="kicker">Baltina · 2026 · solo developer</p>
+        <h3>Inventory and money tracking for a 7-shop family business</h3>
+        <p>A family business in Addis Ababa supplies spices and bread to 7 shops run by 4 owners. Stock and money lived in a Google Sheet, and nobody could quickly tell what each shop sold, what was left, or what it owed. I built the tablet-first app that replaces it.</p>
+        <ul class="ticks">
+          <li><b>One or two taps per sale</b> on big buttons, with cut loaves sold in pieces.</li>
+          <li><b>Deliveries count only once confirmed</b> by the shop. Differences become "problems" the owner resolves.</li>
+          <li><b>Works offline.</b> Entries queue on the tablet with a unique id, so nothing is lost or counted twice.</li>
+          <li><b>Amharic and English</b>, with Ethiopian and Gregorian dates.</li>
+          <li><b>Money lives in the database.</b> Totals come from Postgres functions; row-level security means shop tablets can't read prices or debts.</li>
+        </ul>
+        <div class="chips"><span>JavaScript</span><span>Supabase</span><span>PostgreSQL + RLS</span><span>PWA</span><span>Cloudflare Pages</span><span>GitHub Actions</span></div>
+        <p class="note">Deployed and fully built for stage 1; the business is preparing for daily use. Screenshots use made-up demo data. Code is private (client work).</p>
+      </div>
+      <div class="case-media">
+        <div class="shots" data-shots>
+          <figure class="shot is-on"><img src="img/baltina-sell.webp" alt="Baltina sell screen with product tiles for bread and spices" loading="lazy" width="1400" height="875"><figcaption>Sell screen</figcaption></figure>
+          <figure class="shot"><img src="img/baltina-sell-am.webp" alt="The same sell screen in Amharic" loading="lazy" width="1000" height="625"><figcaption>Same screen in Amharic</figcaption></figure>
+          <figure class="shot"><img src="img/baltina-overview.webp" alt="Owner overview with sales, profit, money owed and waste per week" loading="lazy" width="1000" height="703"><figcaption>Owner overview</figcaption></figure>
+          <figure class="shot"><img src="img/baltina-money.webp" alt="Money owed between shops and owners" loading="lazy" width="1000" height="625"><figcaption>Money owed</figcaption></figure>
+        </div>
+        <div class="shot-tabs" role="tablist" aria-label="Baltina screenshots">
+          <button role="tab" aria-selected="true">Sell</button><button role="tab" aria-selected="false">አማርኛ</button><button role="tab" aria-selected="false">Overview</button><button role="tab" aria-selected="false">Debts</button>
+        </div>
+        <img class="phone" src="img/baltina-phone.webp" alt="Baltina on a phone" loading="lazy" width="420" height="908">
+      </div>
+      <div class="demo">
+        <video id="baltinaVideo" controls preload="metadata" playsinline poster="img/baltina-video-poster.webp" src="video/baltina-walkthrough.mp4"></video>
+        <p class="note">A 90-second narrated walkthrough of the real app in use, with made-up demo data. Captions are on screen.</p>
+      </div>
+      <dl class="mini-stats">
+        <div><dt><span class="count" data-to="7">0</span> + <span class="count" data-to="2">0</span></dt><dd>shops + warehouses</dd></div>
+        <div><dt><span class="count" data-to="46">0</span></dt><dd>SQL migrations, each tested with PGlite</dd></div>
+        <div><dt>0</dt><dd>double counts when the internet drops</dd></div>
+      </dl>
+    </article>
+
+    <article class="case case-flip reveal">
+      <div class="case-copy">
+        <p class="kicker">Edge Ledger · 2026 · solo developer</p>
+        <h3>A trading journal with an AI coach</h3>
+        <p>A web app for logging trades and finding the patterns in them. The dashboard breaks results down by rule and by mood, and an AI coach built on the Claude API reviews the trades. All data is stored in the browser with IndexedDB, so it needs no server.</p>
+        <div class="chips"><span>JavaScript</span><span>HTML / CSS</span><span>IndexedDB</span><span>Claude API</span></div>
+        <p class="note">Screenshots use a demo account, not real trades.</p>
+      </div>
+      <div class="case-media">
+        <div class="shots" data-shots>
+          <figure class="shot is-on"><img src="img/edge-dash.webp" alt="Edge Ledger dashboard with calendar and recent trades" loading="lazy" width="1400" height="1231"><figcaption>Dashboard</figcaption></figure>
+          <figure class="shot"><img src="img/edge-insights.webp" alt="Edge Ledger insights with discipline score chart" loading="lazy" width="1000" height="619"><figcaption>Insights</figcaption></figure>
+          <figure class="shot"><img src="img/edge-trades.webp" alt="Edge Ledger trade log table" loading="lazy" width="1000" height="619"><figcaption>Trade log</figcaption></figure>
+        </div>
+        <div class="shot-tabs" role="tablist" aria-label="Edge Ledger screenshots">
+          <button role="tab" aria-selected="true">Dashboard</button><button role="tab" aria-selected="false">Insights</button><button role="tab" aria-selected="false">Trades</button>
+        </div>
+        <img class="phone" src="img/edge-mobile.webp" alt="Edge Ledger on a phone" loading="lazy" width="420" height="715">
+      </div>
+    </article>
+  </section>
+
+  <!-- AI -->
+  <section class="section" id="ai">
+    <header class="section-head reveal">
+      <span class="idx">02</span>
+      <h2>Testing AI <em>until it breaks</em></h2>
+      <p>Five open-source projects. I ran small open models on my own computer, and each project turned up a problem that one overall score would have hidden.</p>
+    </header>
+
+    <div class="evals">
+      <article class="eval reveal" data-tilt>
+        <header><p class="kicker">evalforge</p><h3>LLM evaluation harness</h3></header>
+        <p>Scores models on math, coding and instruction tasks with 7 scorers, including unit tests and LLM-as-judge.</p>
+        <div class="chart" data-chart="bars" data-max="100" data-unit="%"
+             data-rows='[["Llama 3.2 3B",91],["Qwen 2.5 3B",91]]'></div>
+        <p class="finding">A 91% tie on 45 tasks, which is within noise. The useful part was below the score: Qwen led on math, Llama on format rules.</p>
+        <footer><span>Python · Ollama · GitHub Actions</span></footer>
+      </article>
+
+      <article class="eval eval-wide reveal" data-tilt>
+        <header><p class="kicker">preference-studio</p><h3>RLHF preference labeling app</h3></header>
+        <p>Raters compare model answers on a rubric with randomized order and gold checks; exports DPO data. Krippendorff's alpha and Fleiss'/Cohen's kappa written from scratch.</p>
+        <div class="chart" data-chart="bars" data-max="50" data-unit="%" data-hot="0"
+             data-rows='[["Llama 3.2 3B",45],["Qwen 2.5 3B",8]]'></div>
+        <p class="finding">Same answer pairs, order swapped. A fair judge flips 0%. <b>Llama changed 45% of its verdicts.</b></p>
+        <footer><span>FastAPI · React/TS · PostgreSQL · Docker</span></footer>
+      </article>
+
+      <article class="eval eval-wide reveal" data-tilt>
+        <header><p class="kicker">amharic-llm-bench</p><h3>Amharic benchmark for small open models</h3></header>
+        <p>113 items across 5 task types, scored with spelling normalization, script checks and chrF matched to sacreBLEU. I reviewed every item as a native speaker.</p>
+        <div class="chart" data-chart="bars" data-max="100" data-hot="2"
+             data-rows='[["Reading questions (% right)",92],["Amharic → English (chrF)",68.7],["English → Amharic (chrF)",7.4]]'></div>
+        <p class="finding">Gemma 3 4B reads Amharic far better than it writes it. 34% of its Amharic drifted into other scripts mid-sentence: <span class="am">በ saturday ቀን ከ temprano መ abrió።</span></p>
+        <footer><span>Python · evalforge · Ollama</span></footer>
+      </article>
+
+      <article class="eval reveal" data-tilt>
+        <header><p class="kicker">rag-eval-assistant</p><h3>Document Q&A with its own evaluation</h3></header>
+        <p>Retrieval scored separately from answering, on 43 answerable questions.</p>
+        <div class="chart" data-chart="bars" data-max="100" data-unit="%"
+             data-rows='[["Hybrid search, top 3",93],["Keyword only, top 3",84],["Gemma 3 4B facts right",86]]'></div>
+        <p class="finding">Hybrid search found the right passage more often than keywords alone.</p>
+        <footer><span>Python · embeddings · Docker</span></footer>
+      </article>
+
+      <article class="eval reveal" data-tilt>
+        <header><p class="kicker">label-auditor</p><h3>Mislabeled-data detector</h3></header>
+        <p>Confident learning written from scratch, tested on iris and digits with planted label flips.</p>
+        <div class="chart" data-chart="bars" data-max="100" data-unit="%"
+             data-rows='[["iris: flags that were real errors",93],["digits: flags that were real errors",99]]'></div>
+        <p class="finding">When it raised a flag, it was almost always right. My biology internship was the same kind of job, by hand: fixing labels in specimen records.</p>
+        <footer><span>Python · scikit-learn · cleanlab</span></footer>
+      </article>
+    </div>
+    <p class="limits reveal"><b>Limits, stated up front.</b> All models were small (1B to 4B) and ran locally; test sets were 40 to 113 items, so gaps of a few points are noise. Label-noise results use planted flips. These are findings about how to evaluate, not claims about frontier models.</p>
+    <p class="lesson reveal">What I took from all five: a single score hides a lot, so I read the failures. And I test the test before I trust it.</p>
+  </section>
+
+
+  <!-- PATH -->
+  <section class="section" id="path">
+    <header class="section-head reveal">
+      <span class="idx">03</span>
+      <h2>The path <em>so far</em></h2>
+    </header>
+    <div class="path-grid">
+    <ol class="timeline">
+      <li class="reveal"><time>2022 to 2026</time><h3>BSc Computer Science, St. Mary's University</h3><p>Addis Ababa.</p></li>
+      <li class="reveal"><time>Jul to Sep 2025</time><h3>IT Intern, CURE Hospital</h3><p>IT department, Ethiopia. Contributed to the patient record system and helped staff use it; fixed computer, printer and network problems; set up and updated computers and software.</p></li>
+      <li class="reveal"><time>2022 to 2025</time><h3>BSc Biology, Addis Ababa University</h3><p>Addis Ababa.</p></li>
+      <li class="reveal"><time>May to Dec 2024</time><h3>Web Developer, Zala Tech</h3><p>Addis Ababa. Built responsive web apps front-end and back-end, wrote and documented REST APIs for multi-user apps, and sped up slow PostgreSQL queries and page loads.</p></li>
+      <li class="reveal"><time>Nov to Dec 2023</time><h3>Biology Intern, Ethiopian Biodiversity Institute</h3><p>Classified mammal, reptile and bird specimens by strict taxonomic criteria; audited biodiversity records and corrected labeling errors.</p></li>
+    </ol>
+    <figure class="portrait reveal">
+      <img src="img/bereket-cut.webp" alt="Portrait of Bereket Abebe" loading="lazy" width="720" height="864">
+      <figcaption><b>Bereket Abebe</b><span>Addis Ababa · UTC+3</span></figcaption>
+    </figure>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <p class="eyebrow reveal">Work with me</p>
+    <h2 class="reveal">Have a web app to build <br>or an AI to <em class="ink">test?</em></h2>
+    <p class="want reveal">Send me a message on Upwork and tell me what you need.</p>
+  </section>
+</main>
+
+<footer class="foot">
+  <span>© 2026 Bereket Abebe</span>
+  <span>Hand-built: HTML, CSS and JavaScript. No framework, no tracking.</span>
+</footer>
+
+<script src="ask-data.js?v=9"></script>
+<script src="main.js?v=9"></script>
+</body>
+</html>

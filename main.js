@@ -1,6 +1,6 @@
 (() => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const fine = matchMedia('(any-hover: hover) and (any-pointer: fine)').matches;
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 
@@ -66,6 +66,7 @@
     let rx = -100, ry = -100, tx = -100, ty = -100;
     root.classList.add('ink-cursor');
     addEventListener('pointermove', e => {
+      if (e.pointerType && e.pointerType !== 'mouse') { root.classList.remove('cur-on'); return; }
       tx = e.clientX; ty = e.clientY; root.classList.add('cur-on');
       dot.style.transform = `translate3d(${tx}px,${ty}px,0)`;
       const el = e.target.closest ? e.target : null;
@@ -273,6 +274,6 @@
     busy = false;
   }
   ['What did you find about AI judges?', 'Tell me about Baltina', 'How did small models do in Amharic?', 'What is your tech stack?', 'Why hire you for AI evaluation?', 'Is this widget an AI?']
-    .forEach(q => { const b = document.createElement('button'); b.type = 'button'; b.textContent = q; b.onclick = () => ask(q); chips.appendChild(b); });
-  form.addEventListener('submit', e => { e.preventDefault(); ask(input.value); input.value = ''; });
+    .forEach(q => { if (!chips) return; const b = document.createElement('button'); b.type = 'button'; b.textContent = q; b.onclick = () => ask(q); chips.appendChild(b); });
+  if (form) form.addEventListener('submit', e => { e.preventDefault(); ask(input.value); input.value = ''; });
 })();
