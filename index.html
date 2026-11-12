@@ -20,6 +20,7 @@
 <canvas id="ink" aria-hidden="true"></canvas>
 <div class="grain" aria-hidden="true"></div>
 <div class="cursor-glow" aria-hidden="true"></div>
+<div class="cur-ring" aria-hidden="true"></div><div class="cur-dot" aria-hidden="true"></div>
 
 <div class="progress" aria-hidden="true"><i id="prog"></i></div>
 <header class="nav" id="nav">
@@ -189,6 +190,19 @@
         <p class="finding">When it raised a flag, it was almost always right. My biology internship was the same kind of job, by hand: fixing labels in specimen records.</p>
         <footer><span>Python · scikit-learn · cleanlab</span><a href="https://github.com/Beki-hck/label-auditor" target="_blank" rel="noopener">Code ↗</a></footer>
       </article>
+    </div>
+    <div class="more reveal">
+      <p class="kicker">More evaluation work on GitHub</p>
+      <a class="more-row" href="https://github.com/Beki-hck/judge-bias-lab" target="_blank" rel="noopener">
+        <b>judge-bias-lab</b>
+        <span>Three LLM judges on 100 expert-labelled answer pairs. They flipped 48 to 63% of verdicts when the order swapped. The best judge agreed with experts 75% of the time, but only 58% once its verdict had to survive the swap.</span>
+        <i>Code ↗</i>
+      </a>
+      <a class="more-row" href="https://github.com/Beki-hck/prompt-regression-ci" target="_blank" rel="noopener">
+        <b>prompt-regression-ci</b>
+        <span>A 40-case test set that runs in GitHub Actions on every prompt change. A "shortened" prompt fell from 47.5% to 12.5% correct while still returning 100% valid JSON. A format check would have passed it; this gate failed it.</span>
+        <i>Code ↗</i>
+      </a>
     </div>
     <p class="limits reveal"><b>Limits, stated up front.</b> All models were small (1B to 4B) and ran locally; test sets were 40 to 113 items, so gaps of a few points are noise. Label-noise results use planted flips. These are findings about how to evaluate, not claims about frontier models.</p>
     <p class="lesson reveal">The lesson across all five: <em>one headline number hides most of what matters,</em> and the evaluation itself has to be tested before you trust it.</p>

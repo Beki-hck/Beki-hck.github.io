@@ -285,3 +285,23 @@ em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:0}
 .who{gap:20px;max-width:560px}
 .avatar{width:92px;height:92px;box-shadow:0 0 0 1px rgba(124,242,201,.45),0 0 0 6px rgba(124,242,201,.08),0 0 34px -8px var(--ink-glow)}
 @media (max-width:720px){.avatar{width:72px;height:72px}}
+
+/* v7: more work rows + ink cursor */
+.more{margin:28px 0 0;max-width:900px}
+.more-row{display:grid;grid-template-columns:190px 1fr auto;gap:8px 24px;align-items:baseline;padding:18px 4px;border-top:1px solid var(--line);text-decoration:none;transition:background .3s,padding .4s var(--ease)}
+.more-row:last-child{border-bottom:1px solid var(--line)}
+.more-row b{font:500 15px var(--mono);color:var(--text)}
+.more-row span{color:var(--muted);font-size:14.5px}
+.more-row i{font:500 12px var(--mono);color:var(--ink);font-style:normal;white-space:nowrap}
+.more-row:hover{background:rgba(124,242,201,.04);padding-left:14px;padding-right:14px}
+@media (max-width:720px){.more-row{grid-template-columns:1fr auto}.more-row span{grid-column:1/-1;grid-row:2}}
+.cur-dot,.cur-ring{position:fixed;left:0;top:0;pointer-events:none;z-index:100;border-radius:50%;opacity:0;will-change:transform}
+.cur-dot{width:8px;height:8px;margin:-4px 0 0 -4px;background:var(--ink);box-shadow:0 0 12px var(--ink),0 0 28px var(--ink-glow);transition:opacity .3s,width .25s var(--ease),height .25s var(--ease),margin .25s var(--ease)}
+.cur-ring{width:38px;height:38px;margin:-19px 0 0 -19px;border:1px solid rgba(124,242,201,.55);transition:opacity .3s,width .35s var(--ease),height .35s var(--ease),margin .35s var(--ease),background .3s,border-color .3s}
+.ink-cursor,.ink-cursor a,.ink-cursor button,.ink-cursor [data-tilt],.ink-cursor summary{cursor:none}
+.ink-cursor input,.ink-cursor video{cursor:auto}
+.ink-cursor.cur-on .cur-dot,.ink-cursor.cur-on .cur-ring{opacity:1}
+.ink-cursor.cur-link .cur-ring{width:64px;height:64px;margin:-32px 0 0 -32px;background:rgba(124,242,201,.10);border-color:var(--ink)}
+.ink-cursor.cur-link .cur-dot{width:5px;height:5px;margin:-2.5px 0 0 -2.5px}
+.ink-cursor.cur-down .cur-ring{width:26px;height:26px;margin:-13px 0 0 -13px;background:rgba(124,242,201,.25)}
+.ink-cursor.cur-native .cur-dot,.ink-cursor.cur-native .cur-ring{opacity:0}

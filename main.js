@@ -60,6 +60,25 @@
     if (fine) glow.style.transform = `translate3d(${e.clientX}px,${e.clientY}px,0)`;
   }, { passive: true });
 
+  /* ---------- ink cursor: a glowing dot with a ring that trails behind ---------- */
+  if (fine) {
+    const dot = $('.cur-dot'), ring = $('.cur-ring'), root = document.documentElement;
+    let rx = -100, ry = -100, tx = -100, ty = -100;
+    root.classList.add('ink-cursor');
+    addEventListener('pointermove', e => {
+      tx = e.clientX; ty = e.clientY; root.classList.add('cur-on');
+      dot.style.transform = `translate3d(${tx}px,${ty}px,0)`;
+      const el = e.target.closest ? e.target : null;
+      root.classList.toggle('cur-link', !!(el && el.closest('a,button,[role=tab]')));
+      root.classList.toggle('cur-native', !!(el && el.closest('input,video,textarea')));
+    }, { passive: true });
+    addEventListener('pointerdown', () => root.classList.add('cur-down'));
+    addEventListener('pointerup', () => root.classList.remove('cur-down'));
+    document.addEventListener('mouseleave', () => root.classList.remove('cur-on'));
+    (function follow() { rx += (tx - rx) * (reduce ? 1 : .18); ry += (ty - ry) * (reduce ? 1 : .18);
+      ring.style.transform = `translate3d(${rx}px,${ry}px,0)`; requestAnimationFrame(follow); })();
+  }
+
   /* ---------- nav hide on scroll + active link ---------- */
   const nav = $('#nav'); let lastY = 0;
   const links = $$('.nav-links a');
