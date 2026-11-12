@@ -19,7 +19,7 @@ window.ASK_KB = [
     a: 'Baltina runs in Amharic and English, with Ethiopian and Gregorian dates, because the people using it at the shops work in Amharic.' },
   { q: ['tell me about edge ledger', 'trading journal', 'ai coach'],
     keys: 'edge ledger trading journal trade trades coach claude indexeddb redesign design theme',
-    a: 'Edge Ledger is a web app I use to log and analyze my own trades. It has a dashboard, stats and an AI coach that reviews trades using the Claude API. Data is stored locally with IndexedDB. In November 2026 I redesigned the whole interface.',
+    a: 'Edge Ledger is a web app I use to log and analyze my own trades. It has a dashboard, stats and an AI coach that reviews trades using the Claude API. Data is stored locally with IndexedDB.',
     link: '#web', linkText: 'See Edge Ledger' },
   { q: ['what did you find about ai judges', 'llm as judge', 'position bias', 'preference studio'],
     keys: 'judge judges bias biased position order swap swapped flip flips flipped preference studio rlhf llama qwen verdict verdicts kappa krippendorff dpo rater raters labeling',

@@ -53,10 +53,10 @@
       </div>
     </div>
     <dl class="stats reveal">
-      <div><dt><span class="count" data-to="7">0</span></dt><dd>shops Baltina, my inventory app, is built for</dd></div>
-      <div><dt><span class="count" data-to="46">0</span></dt><dd>tested SQL migrations behind it</dd></div>
-      <div><dt><span class="count" data-to="5">0</span></dt><dd>open-source AI evaluation tools</dd></div>
-      <div><dt><span class="count" data-to="113">0</span></dt><dd>Amharic benchmark items I wrote and reviewed</dd></div>
+      <div><dt><span class="count" data-to="7">0</span></dt><dd>shops covered by Baltina, my inventory app</dd></div>
+      <div><dt><span class="count" data-to="46">0</span></dt><dd>database changes in Baltina, each one tested</dd></div>
+      <div><dt><span class="count" data-to="5">0</span></dt><dd>AI testing projects, open on GitHub</dd></div>
+      <div><dt><span class="count" data-to="113">0</span></dt><dd>Amharic test questions I wrote and checked</dd></div>
     </dl>
     <div class="ge" aria-hidden="true">ሰላም</div>
   </section>
@@ -119,7 +119,7 @@
       <div class="case-copy">
         <p class="kicker">Edge Ledger · 2026 · solo developer</p>
         <h3>A trading journal with an AI coach</h3>
-        <p>A web app I use to log and analyze my own trades: a dashboard, stats by rule and by feeling, and an AI coach that reviews trades. In November 2026 I redesigned the whole interface with a calmer dark theme, new type, a new logo and regrouped settings.</p>
+        <p>I trade, so I built the journal I wanted. I log every trade, see my results by rule and by mood, and an AI coach reviews the trades with me.</p>
         <div class="chips"><span>JavaScript</span><span>HTML / CSS</span><span>IndexedDB</span><span>Claude API</span></div>
         <p class="note">Screenshots use a demo account, not real trades.</p>
       </div>
@@ -142,7 +142,7 @@
     <header class="section-head reveal">
       <span class="idx">02</span>
       <h2>Testing AI <em>until it breaks</em></h2>
-      <p>Five open-source tools. Each one ran real models (small open models, locally) and found something a single score would hide.</p>
+      <p>Five open-source projects. I ran small open models on my own computer, and each project turned up a problem that one overall score would have hidden.</p>
     </header>
 
     <div class="evals">
@@ -191,21 +191,8 @@
         <footer><span>Python · scikit-learn · cleanlab</span><a href="https://github.com/Beki-hck/label-auditor" target="_blank" rel="noopener">Code ↗</a></footer>
       </article>
     </div>
-    <div class="more reveal">
-      <p class="kicker">More evaluation work on GitHub</p>
-      <a class="more-row" href="https://github.com/Beki-hck/judge-bias-lab" target="_blank" rel="noopener">
-        <b>judge-bias-lab</b>
-        <span>Three LLM judges on 100 expert-labelled answer pairs. They flipped 48 to 63% of verdicts when the order swapped. The best judge agreed with experts 75% of the time, but only 58% once its verdict had to survive the swap.</span>
-        <i>Code ↗</i>
-      </a>
-      <a class="more-row" href="https://github.com/Beki-hck/prompt-regression-ci" target="_blank" rel="noopener">
-        <b>prompt-regression-ci</b>
-        <span>A 40-case test set that runs in GitHub Actions on every prompt change. A "shortened" prompt fell from 47.5% to 12.5% correct while still returning 100% valid JSON. A format check would have passed it; this gate failed it.</span>
-        <i>Code ↗</i>
-      </a>
-    </div>
     <p class="limits reveal"><b>Limits, stated up front.</b> All models were small (1B to 4B) and ran locally; test sets were 40 to 113 items, so gaps of a few points are noise. Label-noise results use planted flips. These are findings about how to evaluate, not claims about frontier models.</p>
-    <p class="lesson reveal">The lesson across all five: <em>one headline number hides most of what matters,</em> and the evaluation itself has to be tested before you trust it.</p>
+    <p class="lesson reveal">What I took from all five: a single score hides a lot, so I read the failures. And I test the test before I trust it.</p>
   </section>
 
   <!-- ASK -->
@@ -213,7 +200,7 @@
     <header class="section-head reveal">
       <span class="idx">03</span>
       <h2>Ask about <em>my work</em></h2>
-      <p>A small search over my own project notes. It runs entirely in your browser: no AI API, nothing sent anywhere. It shows you how sure it is, because an honest system should.</p>
+      <p>A small search over my own project notes. It runs entirely in your browser: no AI API, nothing sent anywhere. It shows how sure it is, and says so when it does not know.</p>
     </header>
     <div class="term reveal">
       <div class="term-bar"><i></i><i></i><i></i><span>ask.bereket — local, offline</span></div>
