@@ -281,3 +281,7 @@ em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:0}
 .portrait figcaption{position:static;padding:16px 18px 18px;background:#0b1016;border-top:1px solid var(--line)}
 /* v5: no glow behind the hair, soft light from below instead */
 .portrait{background:radial-gradient(110% 70% at 50% 108%,rgba(124,242,201,.20),rgba(108,182,255,.06) 50%,#0d1319 78%)}
+/* v6: larger, calmer avatar that shows the whole head */
+.who{gap:20px;max-width:560px}
+.avatar{width:92px;height:92px;box-shadow:0 0 0 1px rgba(124,242,201,.45),0 0 0 6px rgba(124,242,201,.08),0 0 34px -8px var(--ink-glow)}
+@media (max-width:720px){.avatar{width:72px;height:72px}}
