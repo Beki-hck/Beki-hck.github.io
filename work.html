@@ -29,6 +29,7 @@
   <nav class="nav-links" aria-label="Sections">
     <a href="#web">Web apps</a>
     <a href="#ai">AI evaluation</a>
+    <a href="#ask">Ask</a>
     <a href="#path">Path</a>
   </nav>
 </header>
@@ -193,11 +194,32 @@
     <p class="lesson reveal">What I took from all five: a single score hides a lot, so I read the failures. And I test the test before I trust it.</p>
   </section>
 
+  <!-- ASK -->
+  <section class="section" id="ask">
+    <header class="section-head reveal">
+      <span class="idx">03</span>
+      <h2>Ask about <em>my work</em></h2>
+      <p>A small search over my own project notes. It runs entirely in your browser: no AI API, nothing sent anywhere. It shows how sure it is, and says so when it does not know.</p>
+    </header>
+    <div class="term reveal">
+      <div class="term-bar"><i></i><i></i><i></i><span>ask.bereket — local, offline</span></div>
+      <div class="term-log" id="askLog" aria-live="polite">
+        <div class="msg bot"><p>Hi. Ask me about Baltina, Edge Ledger, any of the AI evaluation projects, my skills, or my background.</p></div>
+      </div>
+      <div class="term-chips" id="askChips"></div>
+      <form class="term-input" id="askForm" autocomplete="off">
+        <span class="prompt" aria-hidden="true">›</span>
+        <label class="sr" for="askQ">Your question</label>
+        <input id="askQ" placeholder="e.g. what did you find about LLM judges?" maxlength="200">
+        <button class="btn btn-ink" type="submit">Ask</button>
+      </form>
+    </div>
+  </section>
 
   <!-- PATH -->
   <section class="section" id="path">
     <header class="section-head reveal">
-      <span class="idx">03</span>
+      <span class="idx">04</span>
       <h2>The path <em>so far</em></h2>
     </header>
     <div class="path-grid">
@@ -228,6 +250,9 @@
 </footer>
 
 <script src="ask-data.js?v=10"></script>
+<script>/* Upwork page: no contact answers, no outside links */
+window.ASK_KB=(window.ASK_KB||[]).filter(k=>!/^(contact|resume|upwork|github)$/.test(k.q[0])).map(k=>{if(k.link&&k.link[0]!=="#")delete k.link;return k});
+window.ASK_KB.push({q:["contact","how to reach you","hire you"],keys:"contact email mail reach hire available message phone linkedin github",a:"Send me a message here on Upwork and tell me what you need."});</script>
 <script src="main.js?v=10"></script>
 </body>
 </html>
