@@ -102,6 +102,7 @@ em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:0}
 .ticks li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:1px;background:var(--ink);box-shadow:0 0 8px var(--ink)}
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px}
 .chips span{font:500 12px var(--mono);padding:5px 9px;border-radius:7px;border:1px solid var(--line-2);color:#b8c2ca}
+.case-links{display:flex;flex-wrap:wrap;gap:10px;margin:4px 0 20px}
 .note{font-size:13px;color:var(--dim);margin:0;border-left:2px solid var(--line-2);padding-left:12px}
 .case-media{position:relative;padding-bottom:36px}
 .shots{position:relative;aspect-ratio:16/10;border-radius:16px;overflow:hidden;background:var(--card);

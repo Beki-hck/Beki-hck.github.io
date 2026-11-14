@@ -273,7 +273,7 @@
     }
     busy = false;
   }
-  ['What did you find about AI judges?', 'Tell me about Baltina', 'How did small models do in Amharic?', 'What is your tech stack?', 'Why hire you for AI evaluation?', 'Is this widget an AI?']
+  ['What did you find about AI judges?', 'Tell me about Askwell', 'Tell me about Baltina', 'How did small models do in Amharic?', 'What is your tech stack?', 'Why hire you for AI evaluation?', 'Is this widget an AI?']
     .forEach(q => { if (!chips) return; const b = document.createElement('button'); b.type = 'button'; b.textContent = q; b.onclick = () => ask(q); chips.appendChild(b); });
   if (form) form.addEventListener('submit', e => { e.preventDefault(); ask(input.value); input.value = ''; });
 })();
